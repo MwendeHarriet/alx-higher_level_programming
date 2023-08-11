@@ -23,7 +23,8 @@ def main():
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-        print(f"{a} {operator} {b} = {result}")
+
+    print(f"{a} {operator} {b} = {result}")
 
 
 if __name__ == "__main__":
