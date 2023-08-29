@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""defines a MagicClass by Holberton School"""
 import math
+import dis
 
 
 class MagicClass:
