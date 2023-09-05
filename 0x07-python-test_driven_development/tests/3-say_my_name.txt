@@ -1,46 +1,61 @@
 # 3-say_my_name.txt
-This modules defines a function "say_my_name(first_name, last_name="")".
+
+===========================
+How to Use 3-say_my_name.py
+===========================
+
+This modules defines a function ``say_my_name(first_name, last_name="")``.
 
 Usage
 =====
-"say_my_name(...)" should print "My name is <first_name> <last_name>".
+
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
 
 ::
+
     >>> say_my_name = __import__('3-say_my_name').say_my_name
     >>> say_my_name("Donquixote", "Doflamingo")
     My name is Donquixote Doflamingo
 
 ::
-    >>> say_my_name("Monkey", "D Luffy")
-    My name is Cornelius Monkey D Luffy
+
+    >>> say_my_name("Monkey D", "Luffy IV")
+    My name is Monkey D Luffy IV
 
 The parameter ```last_name``` is optional. If no last name is provided,
 an empty string is printed instead.
 
 ::
-    >>> say_my_name("Roronoa")
-    My name is Roronoa
 
-Non String Names
+    >>> say_my_name("Sukuna")
+    My name is Sukuna
 
-The parameters first_name and last_name must be strings otherwise TypeError will be raised.
+Invalid Names
+=============
+
+The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
+a TypeError is raised.
 
 ::
-    >>> say_my_name(007, "James")
+
+    >>> say_my_name(7, "Hancock")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
-    >>> say_my_name("Trafalger", "$$" "Law)
+
+    >>> say_my_name("Pirate", ["Hunter", "Roronoa", "Zoro"])
     Traceback (most recent call last):
-    TypeError: last_name must be a string::
+    TypeError: last_name must be a string
 
 ::
-    >>> say_my_name({"CP" 9, "Rob Lucci": No. 1)
+
+    >>> say_my_name({"Pirate": 4, "Boa": 23}, 7.7)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
+
     >>> say_my_name(None)
     Traceback (most recent call last):
     TypeError: first_name must be a string
@@ -48,6 +63,9 @@ The parameters first_name and last_name must be strings otherwise TypeError will
 At least one name must be provided.
 
 ::
-    >>> say_my_name()    Traceback (most recent call last):
+
+    >>> say_my_name()
+    Traceback (most recent call last):
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
 
