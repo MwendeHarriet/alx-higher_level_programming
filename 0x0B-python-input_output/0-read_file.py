@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-"""
-This program reads files
-"""
+"""This module reads and prints a file."""
 
 
 def read_file(filename=""):
+    """Reads and prints contents of a file.
+    Args:
+        filename (str): The name of the text file.
     """
-    This function read a file and print it's content
-    """
-
-    with open(filename, encoding="utf-8") as _file:
-        print(_file.read(), end="")
-
+    with open(filename, 'r', encoding='utf-8') as i_file:
+        print(i_file.read(), end="")
