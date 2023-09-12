@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-"""This module reads a text file (UTF8) and prints it to stdout"""
+"""This modeule reads files."""
 
 
 def read_file(filename=""):
-    """
-    Reads and prints contents of a file.
-    Args:
-        filename (str): The name of the text file.
-    """
-    with open(filename, 'r', encoding='utf-8') as ifile:
-        print(ifile.read(), end="")
+    """Reads and prints it's content."""
+
+    with open(filename, encoding="utf-8") as _file:
+        print(_file.read(), end="")
