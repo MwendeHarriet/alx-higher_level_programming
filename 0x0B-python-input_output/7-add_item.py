@@ -1,18 +1,24 @@
 #!/usr/bin/python3
-"""This script adds all arguments to a Python list and saves to a file."""
+"""This module take the file add_item.json and add the
+parameters to the list inside this file."""
 
+from sys import argv
+from os.path import exists
 
-import sys
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
+namefile = "add_item.json"
+argc = len(argv)
 
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+file_list = []
 
-try:
-    args = load_from_json_file("add_item.json")
-except Exception:
-    args = []
+if exists(namefile):
+    file_list = load_from_json_file(namefile)
 
-for n in sys.argv[1:]:
-    args.append(n)
-save_to_json_file(dat, "add_item.json")
+if (argc == 1):
+    save_to_json_file(file_list, namefile)
+else:
+    for index in range(1, argc):
+        file_list.append(argv[index])
+    save_to_json_file(file_list, namefile)
