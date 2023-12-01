@@ -13,7 +13,7 @@ if __name__ == "__main__":
         data['q'] = ""
     i = requests.post('http://0.0.0.0:5000/search_user', data)
     try:
-        dictti = i.json()
+        dict_1 = i.json()
         if len(dict_1) != 0:
             print("[{}] {}".format(dict_1["id"], dict_1["name"]))
         else:
